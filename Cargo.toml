@@ -1,0 +1,17 @@
+[package]
+name = "message-sink"
+version = "0.1.0"
+edition = "2021"
+license-file = "LICENSE"
+description = "Message framing for AsyncRead + AsyncWrite"
+repository = "https://github.com/retrohacker/message-sink"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures = { version = "0.3.30", default-features = false, features = ["std"] }
+
+[dev-dependencies]
+futures_ringbuf = "0.4.0"
+rand = "0.8.5"
+tokio = { version = "1.37.0", features = ["macros", "rt-multi-thread"] }
